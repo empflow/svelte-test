@@ -4,14 +4,12 @@
 
 <form>
 	<div class="input-group">
-		<label for="email">Email</label>
-		<input id="email" type="email" bind:value={$email} />
-	</div>
-
-	<div class="input-group">
 		<label for="name">Name</label>
-		<input type="text" id="name" bind:value={$name} />
+		<input bind:value={$name} />
 	</div>
+	<button on:click={() => ($name += '!')}>Add '!'</button>
+	<button on:click={() => ($name = '?')}>Turn into a question mark</button>
+	<button on:click={() => ($name = '')}>Clear</button>
 </form>
 
 <style>
