@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Decrement from './Decrement.svelte';
 	import Increment from './Increment.svelte';
+	import Time from './Time.svelte';
 	import { count, time } from './stores';
 </script>
 
@@ -14,9 +15,7 @@
 		<Increment on:update={() => count.update((prev) => prev + 1)} />
 	</div>
 
-	<div>
-		The time is {$time}
-	</div>
+	<Time />
 </div>
 
 <style>
