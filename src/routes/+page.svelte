@@ -11,8 +11,8 @@
 	</div>
 
 	<div class="buttons">
-		<Decrement on:update={() => count.update((prev) => prev - 1)} />
-		<Increment on:update={() => count.update((prev) => prev + 1)} />
+		<Increment on:update={count.increment} />
+		<Decrement on:update={count.decrement} />
 	</div>
 
 	<Time />
