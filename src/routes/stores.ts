@@ -17,3 +17,5 @@ export const time = readable(Date.now(), (set) => {
 export const timeDividedBy1000 = derived(time, ($time) => {
 	return $time / 1000;
 });
+export const email = writable('');
+export const name = writable('');

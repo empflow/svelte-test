@@ -1,21 +1,21 @@
 <script lang="ts">
+	import Count from './Count.svelte';
 	import Decrement from './Decrement.svelte';
+	import Form from './Form.svelte';
 	import Increment from './Increment.svelte';
 	import Time from './Time.svelte';
-	import { count, time } from './stores';
+	import { count, email, name, time } from './stores';
+
+	$: {
+		console.log($name);
+		console.log($email);
+	}
 </script>
 
 <div class="container">
-	<div>
-		The count is {$count}
-	</div>
-
-	<div class="buttons">
-		<Increment on:update={count.increment} />
-		<Decrement on:update={count.decrement} />
-	</div>
-
+	<Count />
 	<Time />
+	<Form />
 </div>
 
 <style>
